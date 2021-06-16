@@ -8,6 +8,8 @@ class App extends React.Component{
       errMsg:'',
       displayErrMsg: false,
       displayMap:false
+      weatherData: '',
+      
     }
   }
   getLocation = async(event) =>{
@@ -20,6 +22,7 @@ class App extends React.Component{
       this.setState({
         locData:locResult.data[0],
         displayMap:true
+        
       })
     }
     catch {
